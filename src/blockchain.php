@@ -5,11 +5,11 @@ class Blockchain
 {
     public float $gas_fee = 0.0001;
     public string $file_blockchain = "data1/data2/data3/data4/data5/data6.json";
-    //  public string $file_blockchain = "wYEB9sCsGdRiBKPbnWlQw0EKM62rHVzToMJuYI9RAJaGa0lBeR0G0JzGWv2NvJDv87f/ZrhBXwE9W8E8Kr791aR4qbEqaHnnFHHwfD6loc3a2H9o2Z8ki2ITzzyhOy5xMBwT9gu/196YFiLvqdadk8lfiiVSDtMvE9Xn3HLZwUkb3POBwItLNLZIHkUofs5OWnmawLL0c34/fYjraj9JwQbhIAqRdTBYgk1lgrgFRPNxPrUIPT1Yq0UvgOINPxurB9EgW9LDOuolaDv/oZYicYaPD9qMTbCpmudh1sF0c4lKzDI0reOp1Xa3N1EnZS7FkpIUEFYmxbYK2tJmBlm/aN5bdWHi7lYWzYXkSI81NUwGXAnaxPoQqOTn17mFGZvtTM3C2MFw9UcsNYbVo34u7Uq.json";
+  
     public array $chain;
     public float $difficulty = 898.1304584;
     public float $reward = 0.0106;
-    // public string $super_account = "zxlr5Mau1XC9GFpqMbCo0yKG319IJg5eyWmbXlgtAR3VngcKUVeEmwuOUN6wTL4L1p4";
+    // public string $super_account = "0xululullilidbdisbwcjehdbdoch2bdh";
     // public string $test_account = "0x1jbdbmdhbfuu4bnddddbm124ramdomstring:d";
 
     public function __construct()
@@ -34,7 +34,7 @@ class Blockchain
                 "zxlr5Mau1XC9GFpqMbCo0yKG319IJg5eyWmbXlgtAR3VngcKUVeEmwuOUN6wTL4L1p4"
             );
             // Testings goes here (pool token 1 symbol is WMITHUW)
-            $this->createLPpool("B3gV3kSzF9qGRcEzNDpT3pfjxnxcYXlDFci3eGYvrKLTS94SVs6kX5sNUxlhdEmsup6", "xKaHV8OXkFvYonrkQrSIv5ZkCkAdV31j26bznVlgmIRkRIcVUE3qK76tlVCMCAt3ISx", "WMITHUW", "MITHUW", 50, 50, "zxlr5Mau1XC9GFpqMbCo0yKG319IJg5eyWmbXlgtAR3VngcKUVeEmwuOUN6wTL4L1p4", 0.99, 1.01);
+            $this->createLPpool("B3gV3kSzF9qGRcEzNDpT3pfjxnxcYXlDFci3eGYvrKLTS94SVs6kX5sNUxlhdEmsup6", "xKaHV8OXkFvYonrkQrSIv5ZkCkAdV31j26bznVlgmIRkRIcVUE3qK76tlVCMCAt3ISx", "WMITHUW", "MITHUW", 50, 50, "0xululullilidbdisbwcjehdbdoch2bdh", 0.99, 1.01);
             
         } else {
             $this->loadBlockchain();
@@ -111,9 +111,9 @@ class Blockchain
     public function createSuperAccount():void
     {
         $block = new Block(count($this->chain), date("Y-m-d H:i:s"), "Super Account Afif Created", $this->getLatestBlock()->hash);
-        $block->user_public_key = "zxlr5Mau1XC9GFpqMbCo0yKG319IJg5eyWmbXlgtAR3VngcKUVeEmwuOUN6wTL4L1p4";
-        $block->user_signature = "mT7BHaUUDu0pntsj1xZUZcdrl3nZiC9p90GcHwuS28yWrJEnxbOjmo6fpbWNUYFR4k4";
-        $block->user_email_address = "admin@mithucoin.zya.me";
+        $block->user_public_key = "0xululullilidbdisbwcjehdbdoch2bdh";
+        $block->user_signature = "0xululullilidbdisbwcjehdbdoch2bdh";
+        $block->user_email_address = "ulululi@hi.org";
         $block->user_recovery_email_address = "afifsaadman2013@gmail.com";
         $block->user_password = password_hash("1234567890", PASSWORD_BCRYPT);
         $block->user_recovery_phone_number = "017000000";
